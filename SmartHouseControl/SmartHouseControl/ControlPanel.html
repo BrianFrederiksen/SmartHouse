@@ -103,16 +103,13 @@
 		<div class="row">
 			<h2 class="centered">Kitchen</h2>
             <div class="centered">
-                <!--<img src="images/KitchenRoom.PNG" height="400px" />-->
-                <div style="position: relative; ">
-                    <img src="images/KitchenRoom.PNG" height="400px" style="position: relative;"/>
-                    <img id="myImage" onclick="changeImage()" src="images/LightBulbOff.png" style="position: absolute;"/>
+                <div style="position: relative;" id="kitchenDiv">
+                    <img id="myKitchen" onclick="changeImageKitchen()" src="images/LightBulbOff.png" />
                 </div>
-
                 <div class="centered">
                     <script>
-                        function changeImage() {
-                            var image = document.getElementById('myImage');
+                        function changeImageKitchen() {
+                            var image = document.getElementById('myKitchen');
                             if (image.src.match("LightBulbOn")) {
                                 image.src = "images/LightBulbOff.png";
                             }
@@ -121,8 +118,6 @@
                             }
                         }
                     </script>
-                    <!--<img id="myImage" onclick="changeImage()" src="images/LightBulbOff.png">-->
-
                     <h5>Slide the bar to adjust the temperature</h5>
                     <input type="range" min="15" max="25" value="10" step="1" onchange="showValue(this.value)" />
                     <span id="range">15 degrees celsius</span>
@@ -144,8 +139,32 @@
 		<div class="row">
 			<h2 class="centered">Living room</h2>
             <div class="centered">
-                <img src="images/LivingRoom.PNG" height="400px" />
-                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+
+                <div style="position: relative;" id="livingRoomDiv">
+                    <img id="myLivingRoom" onclick="changeImageLivingRoom()" src="images/LightBulbOff.png" />
+                </div>
+
+                <script>
+                    function changeImageLivingRoom() {
+                        var image = document.getElementById('myLivingRoom');
+                        if (image.src.match("LightBulbOn")) {
+                            image.src = "images/LightBulbOff.png";
+                        }
+                        else {
+                            image.src = "images/LightBulbOn.png";
+                        }
+                    }
+                </script>
+                <h5>Slide the bar to adjust the temperature</h5>
+                    <input type="range" min="15" max="25" value="10" step="1" onchange="showValue(this.value)" />
+                    <span id="Span1">15 degrees celsius</span>
+
+                    <script type="text/javascript">
+                        function showValue(newValue) {
+                            document.getElementById("range").innerHTML = newValue + " degrees celsius";
+                        }
+                    </script>
+
             </div>
 		</div>
 	</div>
