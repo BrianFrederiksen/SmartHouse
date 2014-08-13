@@ -663,3 +663,31 @@ a:after {
     margin-top:20px;
     margin-left:20px;
 }
+
+#guestRoomDiv
+{
+    width: auto;
+    height: 400px;
+    background-position:center;
+    background-image: url('../images/GuestRoom.PNG');
+    background-repeat: no-repeat;
+}
+#myGuestRoom
+{
+    margin-top:20px;
+    margin-left:20px;
+}
+
+#diningRoomDiv
+{
+    width: auto;
+    height: 400px;
+    background-position:center;
+    background-image: url('../images/DiningRoom.PNG');
+    background-repeat: no-repeat;
+}
+#myDiningRoom
+{
+    margin-top:50px;
+    margin-left:20px;
+}

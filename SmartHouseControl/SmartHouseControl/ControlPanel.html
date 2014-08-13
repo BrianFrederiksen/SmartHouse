@@ -63,8 +63,8 @@
             <input type=button onClick="location.href = 'ControlPanel.html#kitchenRoom'" value='Kitchen' />
             <input type=button onClick="location.href = 'ControlPanel.html#livingRoom'" value='Living room' />
             <input type=button onClick="location.href = 'ControlPanel.html#guestRoom'" value='Guest room' />
-            <input type=button onClick="location.href = 'ControlPanel.html#bathRoom'" value='Bathroom' />
-            <input type=button onClick="location.href = 'ControlPanel.html#officeRoom'" value='Office' />
+            <!--<input type=button onClick="location.href = 'ControlPanel.html#bathRoom'" value='Bathroom' />-->
+            <!--<input type=button onClick="location.href = 'ControlPanel.html#officeRoom'" value='Office' />-->
             <input type=button onClick="location.href = 'ControlPanel.html#diningRoom'" value='Dining room' />
         </div>
     </div>
@@ -127,7 +127,6 @@
                             document.getElementById("range").innerHTML = newValue + " degrees celsius";
                         }
                     </script>
-
                 </div>
             </div>
 		</div>
@@ -155,16 +154,6 @@
                         }
                     }
                 </script>
-                <h5>Slide the bar to adjust the temperature</h5>
-                    <input type="range" min="15" max="25" value="10" step="1" onchange="showValue(this.value)" />
-                    <span id="Span1">15 degrees celsius</span>
-
-                    <script type="text/javascript">
-                        function showValue(newValue) {
-                            document.getElementById("range").innerHTML = newValue + " degrees celsius";
-                        }
-                    </script>
-
             </div>
 		</div>
 	</div>
@@ -175,14 +164,28 @@
 		<div class="row">
 			<h2 class="centered">Guest Room</h2>
             <div class="centered">
-                <img src="images/GuestRoom.PNG" height="400px" />
-                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+                <div style="position: relative;" id="guestRoomDiv">
+                    <img id="myGuestRoom" onclick="changeImageGuestRoom()" src="images/LightBulbOff.png" />
+                </div>
+
+                <script>
+                    function changeImageGuestRoom() {
+                        var image = document.getElementById('myGuestRoom');
+                        if (image.src.match("LightBulbOn")) {
+                            image.src = "images/LightBulbOff.png";
+                        }
+                        else {
+                            image.src = "images/LightBulbOn.png";
+                        }
+                    }
+                </script>
             </div>
 		</div>
 	</div>
+    <hr />
 
     <!-- bathRoom selector -->
-	<div class="container" id="bathRoom" name="bathRoom">
+	<!--<div class="container" id="bathRoom" name="bathRoom">
 		<div class="row">
 			<h2 class="centered">Bathroom</h2>
             <div class="centered">
@@ -191,9 +194,10 @@
             </div>
 		</div>
 	</div>
-    <hr />
+    <hr />-->
+
     <!-- officeRoom selector -->
-	<div class="container" id="officeRoom" name="officeRoom">
+	<!--<div class="container" id="officeRoom" name="officeRoom">
 		<div class="row">
 			<h2 class="centered">Office</h2>
             <div class="centered">
@@ -202,15 +206,28 @@
             </div>
 		</div>
 	</div>
-    <hr />
+    <hr />-->
 
     <!-- diningRoom selector -->
 	<div class="container" id="diningRoom" name="diningRoom">
 		<div class="row">
 			<h2 class="centered">Dining room</h2>
             <div class="centered">
-                <img src="images/DiningRoom.PNG" height="400px" />
-                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+                <div style="position: relative;" id="diningRoomDiv">
+                    <img id="myDiningRoom" onclick="changeImageDiningRoom()" src="images/LightBulbOff.png" />
+                </div>
+
+                <script>
+                    function changeImageDiningRoom() {
+                        var image = document.getElementById('myDiningRoom');
+                        if (image.src.match("LightBulbOn")) {
+                            image.src = "images/LightBulbOff.png";
+                        }
+                        else {
+                            image.src = "images/LightBulbOn.png";
+                        }
+                    }
+                </script>
             </div>
 		</div>
 	</div>
