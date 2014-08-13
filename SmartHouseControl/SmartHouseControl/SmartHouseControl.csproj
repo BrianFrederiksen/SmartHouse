@@ -72,7 +72,9 @@
     <Content Include="images\divider3.jpg" />
     <Content Include="images\divider4.jpg" />
     <Content Include="images\divider6.jpg" />
-    <Content Include="images\floor plan.png" />
+    <Content Include="images\floor plan green.jpg" />
+    <Content Include="images\floor plan red.jpg" />
+    <Content Include="images\floor plan.jpg" />
     <Content Include="images\folio01.jpg" />
     <Content Include="images\folio02.jpg" />
     <Content Include="images\folio03.jpg" />
@@ -85,6 +87,8 @@
     <Content Include="images\GuestRoom.PNG" />
     <Content Include="images\header_bg.jpg" />
     <Content Include="images\KitchenRoom.PNG" />
+    <Content Include="images\LightBulbOff.png" />
+    <Content Include="images\LightBulbOn.png" />
     <Content Include="images\LivingRoom.PNG" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\logo.png" />
