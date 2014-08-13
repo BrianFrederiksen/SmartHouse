@@ -635,4 +635,59 @@ a:after {
 	}
 }
 
+/* Done by WEE - made to let the light bulb inside images*/
+#kitchenDiv
+{
+    width: auto;
+    height: 400px;
+    background-position:center;
+    background-image: url('../images/KitchenRoom.PNG');
+    background-repeat: no-repeat;
+}
+#myKitchen
+{
+    margin-top:140px;
+    margin-left:250px;
+}
 
+#livingRoomDiv
+{
+    width: auto;
+    height: 400px;
+    background-position:center;
+    background-image: url('../images/LivingRoom.PNG');
+    background-repeat: no-repeat;
+}
+#myLivingRoom
+{
+    margin-top:20px;
+    margin-left:20px;
+}
+
+#guestRoomDiv
+{
+    width: auto;
+    height: 400px;
+    background-position:center;
+    background-image: url('../images/GuestRoom.PNG');
+    background-repeat: no-repeat;
+}
+#myGuestRoom
+{
+    margin-top:20px;
+    margin-left:20px;
+}
+
+#diningRoomDiv
+{
+    width: auto;
+    height: 400px;
+    background-position:center;
+    background-image: url('../images/DiningRoom.PNG');
+    background-repeat: no-repeat;
+}
+#myDiningRoom
+{
+    margin-top:50px;
+    margin-left:20px;
+}
