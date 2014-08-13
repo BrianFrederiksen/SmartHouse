@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Smarthouselabs - Controlpanel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/icomoon.css" rel="stylesheet">
+    <link href="css/animate-custom.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <script src="scripts/jquery.min.js" type="text/javascript"></script>
+    <script src="scripts/modernizr.custom.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <div id="navbar-main">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header"> </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="smoothScroll">
+                            <img src="images/logo.jpg" alt="logo" height="20px"></a></li>
+                        <li><a href="index.html#home" class="smoothScroll">Home</a></li>
+                        <li><a href="index.html#services" class="smoothScroll">About</a></li>
+                        <li><a href="index.html#about" class="smoothScroll">Videos</a></li>
+                        <li><a href="index.html#team" class="smoothScroll">Projects</a></li>
+                        <li><a href="index.html#portfolio" class="smoothScroll">Portfolio</a></li>
+                        <li><a href="index.html#blog" class="smoothScroll">Events</a></li>
+                        <li><a href="index.html#contact" class="smoothScroll">Contact</a></li>
+                        <li><a href="ControlPanel.html" class="smoothScroll">ControlPanel</a></li>
+                        <li><a href="DataAnalysis.html" class="smoothScroll">Data Analytics</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==== HEADERWRAP ==== -->
+    <div id="headerwrap" id="home" name="home">
+        <header class="clearfix">
+            <h1><span class="icon icon-sh"></span></h1>
+            <p></p>
+            <p></p>
+        </header>
+    </div>
+   
+    <div class="container" id="buttonRooms" name="buttonRooms">
+        <h2 class="centered">Floor plan overview</h2>
+        <h4 class="centered">Pick a room to play with it</h4>
+        <br />
+        <div class="centered">
+            <input type=button onClick="location.href = 'ControlPanel.html#kitchenRoom'" value='Kitchen' />
+            <input type=button onClick="location.href = 'ControlPanel.html#livingRoom'" value='Living room' />
+            <input type=button onClick="location.href = 'ControlPanel.html#guestRoom'" value='Guest room' />
+            <input type=button onClick="location.href = 'ControlPanel.html#bathRoom'" value='Bathroom' />
+            <input type=button onClick="location.href = 'ControlPanel.html#officeRoom'" value='Office' />
+            <input type=button onClick="location.href = 'ControlPanel.html#diningRoom'" value='Dining room' />
+        </div>
+    </div>
+
+    <br />
+    <div class="container" id="floorImage" name="floorImageOverview">
+        <div class="centered">
+            <img src="images/floor plan.png" height="450px"/>
+        </div>
+    </div>
+    
+    <!-- Random linebreaking... Sams choice! Will be refactored-->
+    <br />
+    <hr />
+    <br />
+
+    <!-- kitchenRoom selector -->
+	<div class="container" id="kitchenRoom" name="kitchenRoom">
+		<div class="row">
+			<h2 class="centered">Kitchen</h2>
+            <div class="centered">
+                <img src="images/KitchenRoom.PNG" height="400px" />
+                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+            </div>
+		</div>
+	</div>
+    <hr />
+
+    <!-- livingRoom selector -->
+	<div class="container" id="livingRoom" name="livingRoom">
+		<div class="row">
+			<h2 class="centered">Living room</h2>
+            <div class="centered">
+                <img src="images/LivingRoom.PNG" height="400px" />
+                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+            </div>
+		</div>
+	</div>
+    <hr />
+
+    <!-- guestRoom selector -->
+	<div class="container" id="guestRoom" name="guestRoom">
+		<div class="row">
+			<h2 class="centered">Guest Room</h2>
+            <div class="centered">
+                <img src="images/GuestRoom.PNG" height="400px" />
+                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+            </div>
+		</div>
+	</div>
+
+    <!-- bathRoom selector -->
+	<div class="container" id="bathRoom" name="bathRoom">
+		<div class="row">
+			<h2 class="centered">Bathroom</h2>
+            <div class="centered">
+                <img src="images/BathRoom.PNG" height="400px" />
+                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+            </div>
+		</div>
+	</div>
+    <hr />
+    <!-- officeRoom selector -->
+	<div class="container" id="officeRoom" name="officeRoom">
+		<div class="row">
+			<h2 class="centered">Office</h2>
+            <div class="centered">
+                <img src="images/OfficeRoom.PNG" height="400px" />
+                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+            </div>
+		</div>
+	</div>
+    <hr />
+
+    <!-- diningRoom selector -->
+	<div class="container" id="diningRoom" name="diningRoom">
+		<div class="row">
+			<h2 class="centered">Dining room</h2>
+            <div class="centered">
+                <img src="images/DiningRoom.PNG" height="400px" />
+                <h2 class="centered"> Probaly some buttons down here to adjust light, temp etc.</h2>
+            </div>
+		</div>
+	</div>
+    <hr />
+    </body>
+</html>
