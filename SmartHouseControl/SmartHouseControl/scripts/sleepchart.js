@@ -9,20 +9,15 @@ google.setOnLoadCallback(drawChart);
 // draws it.
 function drawChart() {
 
+    var jsonObj = { "userData": [{ "id": "1", "hoursOfSleep": "6", "weight": "70", "date": "2014-08-12T07:30:00" }, { "id": "2", "hoursOfSleep": "6.5", "weight": "72", "date": "2014-08-13T07:32:00" }] };
     // Create the data table.
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Date');
     data.addColumn('number', 'Hours of sleep');
-    data.addRows([
-      ['Monday', 5],
-      ['Tuesday', 6],
-      ['Wednesday', 7],
-      ['Thursday', 8],
-      ['Friday', 7.4],
-      ['Saturday', 5.4],
-      ['Sunday', 6.4]
-    ]);
-
+    $.each(jsonObj.userData, function (index, element) {
+        data.addRows([
+            [element.date, parseFloat(element.hoursOfSleep)]]);
+    });
     // Set chart options
     var options = {
         'title': 'How much sleep did you have a day?',

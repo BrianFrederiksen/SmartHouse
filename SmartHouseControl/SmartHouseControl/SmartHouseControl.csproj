@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Api\xml\SmartHouse.xml" />
     <Content Include="ControlPanel.html" />
     <Content Include="css\animate-custom.css" />
     <Content Include="css\bootstrap.css" />
@@ -92,6 +93,7 @@
     <Content Include="index.html" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\powerchart.js" />
     <Content Include="scripts\sleepchart.js" />
     <Content Include="scripts\interact.js" />
     <Content Include="scripts\jquery-func.js" />
@@ -117,6 +119,13 @@
     <Content Include="css\icomoon\icomoon.eot" />
     <Content Include="css\icomoon\icomoon.ttf" />
     <Content Include="css\icomoon\icomoon.woff" />
+    <Content Include="Api\getHouse.php" />
+    <Content Include="Api\postLightValue.php" />
+    <Content Include="Api\postLockValue.php" />
+    <Content Include="Api\ServerConnection.php" />
+    <None Include="Api\xml\SmartHouseScheme.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
