@@ -110,9 +110,11 @@
                             var image = document.getElementById('myKitchen');
                             if (image.src.match("LightBulbOn")) {
                                 image.src = "images/LightBulbOff.png";
+                                postLightValue("1", "0");
                             }
                             else {
                                 image.src = "images/LightBulbOn.png";
+                                postLightValue("1", "1");
                             }
                         }
                     </script>
@@ -187,9 +189,11 @@
                         var image = document.getElementById('myLivingRoom');
                         if (image.src.match("LightBulbOn")) {
                             image.src = "images/LightBulbOff.png";
+                            postLightValue("1", "0");
                         }
                         else {
                             image.src = "images/LightBulbOn.png";
+                            postLightValue("1", "1");
                         }
                     }
                 </script>
@@ -262,9 +266,11 @@
                         var image = document.getElementById('myGuestRoom');
                         if (image.src.match("LightBulbOn")) {
                             image.src = "images/LightBulbOff.png";
+                            postLightValue("1", "0");
                         }
                         else {
                             image.src = "images/LightBulbOn.png";
+                            postLightValue("1", "1");
                         }
                     }
                 </script>
@@ -361,14 +367,16 @@
                         var image = document.getElementById('myDiningRoom');
                         if (image.src.match("LightBulbOn")) {
                             image.src = "images/LightBulbOff.png";
+                            postLightValue("1", "0");
                         }
                         else {
                             image.src = "images/LightBulbOn.png";
+                            postLightValue("1", "1");
                         }
                     }
                 </script>
 
-                                <h4>Increase or decrease the temperature</h4>
+                    <h4>Increase or decrease the temperature</h4>
                     <img id="radiatorDiningRoom" src="images/Radiator.png" height="80px" width="auto"/>
                     <!-- Credit goes to: http://jsfiddle.net/laelitenetwork/puJ6G/ -->
                     <form id='diningRoomForm' method='POST' action='#'>
