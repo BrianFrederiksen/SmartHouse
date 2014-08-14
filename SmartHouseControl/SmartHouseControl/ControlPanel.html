@@ -138,6 +138,7 @@
                                 if (!isNaN(currentVal) && currentVal < 25) {
                                     // Increment
                                     $('input[name=' + fieldName + ']').val(currentVal + 1);
+                                    postTemperature(currentVal + 1, "1");
                                 } else {
                                     // Otherwise put a 0 there
                                     $('input[name=' + fieldName + ']').val(25);
@@ -155,6 +156,7 @@
                                 if (!isNaN(currentVal) && currentVal > 15) {
                                     // Decrement one
                                     $('input[name=' + fieldName + ']').val(currentVal - 1);
+                                    postTemperature(currentVal - 1, "1");
                                 } else {
                                     // Otherwise put a 0 there
                                     $('input[name=' + fieldName + ']').val(15);
@@ -326,5 +328,6 @@
     <script type="text/javascript" src="scripts/smoothscroll.js"></script>
 	<script type="text/javascript" src="scripts/jquery-func.js"></script>
 
+    <script type="text/javascript" src="scripts/ControlPanel.js"></script>
     </body>
 </html>

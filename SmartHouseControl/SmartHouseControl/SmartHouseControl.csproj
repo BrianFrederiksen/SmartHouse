@@ -101,6 +101,7 @@
     <Content Include="index.html" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\ControlPanel.js" />
     <Content Include="scripts\powerchart.js" />
     <Content Include="scripts\sleepchart.js" />
     <Content Include="scripts\interact.js" />
