@@ -24,6 +24,9 @@ function getHouseData() {
                         $("#myKitchen").attr("src", "images/LightBulbOff.png");
                     else
                         $("#myKitchen").attr("src", "images/LightBulbOn.png");
+
+                    $("#qtykitchen").attr("value", room.temperature);
+
                 }
                 else if (room.name == "Living room")
                 {
@@ -31,18 +34,24 @@ function getHouseData() {
                         $("#myLivingRoom").attr("src", "images/LightBulbOff.png");
                     else
                         $("#myLivingRoom").attr("src", "images/LightBulbOn.png");
+                    
+                    $("#qtylivingroom").attr("value", room.temperature);
                 }
                 else if (room.name == "Dinning room") {
                     if (room.light == 0)
                         $("#myDiningRoom").attr("src", "images/LightBulbOff.png");
                     else
                         $("#myDiningRoom").attr("src", "images/LightBulbOn.png");
+                    
+                    $("#qtydinningroom").attr("value", room.temperature);
                 }
                 else if (room.name == "Guest room") {
                     if (room.light == 0)
                         $("#myGuestRoom").attr("src", "images/LightBulbOff.png");
                     else
                         $("#myGuestRoom").attr("src", "images/LightBulbOn.png");
+
+                    $("#qtyguestroom").attr("value", room.temperature);
                 }
             });
 
