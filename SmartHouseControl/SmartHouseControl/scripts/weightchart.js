@@ -12,7 +12,7 @@ function drawChart() {
 
     $.ajax({
         type: "GET",
-        url: connectionString + "http://smarthouses.summerinnovationweek.dk/Api/getUserAnalytics.php?userID=1",
+        url: "http://smarthouses.summerinnovationweek.dk/Api/getUserAnalytics.php?userID=1",
         success: function (jsonObj) {
             
             var jsonDataObj = $.parseJSON(jsonObj);
