@@ -95,6 +95,7 @@
     <Content Include="images\logo.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\OfficeRoom.PNG" />
+    <Content Include="images\Radiator.jpg" />
     <Content Include="images\SmartHouseControlHeaderImage.jpg" />
     <Content Include="images\SmartHouseLogo.jpg" />
     <Content Include="index.html" />

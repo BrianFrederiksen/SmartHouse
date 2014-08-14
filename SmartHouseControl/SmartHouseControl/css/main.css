@@ -703,3 +703,27 @@ a:after {
 {
     
 }
+
+#kitchenForm {
+    text-align: center;
+    padding: 2px;
+}
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+input.qtypluskitchen { width:25px; height:25px;}
+input.qtyminuskitchen { width:25px; height:25px;}
+
+#livingRoomForm {
+    text-align: center;
+    padding: 2px;
+}
+.qty {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+}
+input.qtypluslivingroom { width:25px; height:25px;}
+input.qtyminuslivingroom { width:25px; height:25px;}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>Smarthouselabs - Controlpanel</title>
+    <title>SmartHouseLabs - ControlPanel</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -57,7 +57,7 @@
    
     <div class="container" id="buttonRooms" name="buttonRooms">
         <h2 class="centered">Floor plan overview</h2>
-        <h4 class="centered">Pick a room to play with it</h4>
+        <h4 class="centered">Pick a room to interact with it</h4>
         <br />
         <div class="centered">
             <input type=button onClick="location.href = 'ControlPanel.html#kitchenRoom'" value='Kitchen' />
@@ -70,7 +70,7 @@
     </div>
 
     <div class="container" id="floorImage" name="floorImageOverview">
-        <h3 class="centered">Press lock or unlock the house</h3>
+        <h3 class="centered">Press to lock or unlock the house</h3>
         <div class="centered">
             <div style="position: relative;" id="floorPlanDiv">
                 <img id="myFloorPlan" onclick="changeImageFloor()" src="images/floorPlanGreen.jpg" />
@@ -114,14 +114,53 @@
                             }
                         }
                     </script>
-                    <h5>Slide the bar to adjust the temperature</h5>
-                    <input type="range" min="15" max="25" value="10" step="1" onchange="showValue(this.value)" />
-                    <span id="range">15 degrees celsius</span>
 
-                    <script type="text/javascript">
-                        function showValue(newValue) {
-                            document.getElementById("range").innerHTML = newValue + " degrees celsius";
-                        }
+                    <h4>Increment or decrement the temperature</h4>
+                    <img id="radiatorKitchen" src="images/Radiator.jpg" height="80px" width="auto"/>
+                    <!-- Credit goes to: http://jsfiddle.net/laelitenetwork/puJ6G/ -->
+                    <form id='kitchenForm' method='POST' action='#'>
+                        <input type='button' value='-' class='qtyminuskitchen' field='quantitykitchen' />
+                        <input type='text' name='quantitykitchen' value='15' class='qty' />
+                        <input type='button' value='+' class='qtypluskitchen' field='quantitykitchen' />
+                    </form>
+
+                    <script>
+                        jQuery(document).ready(function () {
+                            // This button will increment the value
+                            $('.qtypluskitchen').click(function (e) {
+                                // Stop acting like a button
+                                e.preventDefault();
+                                // Get the field name
+                                fieldName = $(this).attr('field');
+                                // Get its current value
+                                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                                // If is not undefined
+                                if (!isNaN(currentVal) && currentVal < 25) {
+                                    // Increment
+                                    $('input[name=' + fieldName + ']').val(currentVal + 1);
+                                } else {
+                                    // Otherwise put a 0 there
+                                    $('input[name=' + fieldName + ']').val(25);
+                                }
+                            });
+                            // This button will decrement the value till 0
+                            $(".qtyminuskitchen").click(function (e) {
+                                // Stop acting like a button
+                                e.preventDefault();
+                                // Get the field name
+                                fieldName = $(this).attr('field');
+                                // Get its current value
+                                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                                // If it isn't undefined or its greater than 0
+                                if (!isNaN(currentVal) && currentVal > 15) {
+                                    // Decrement one
+                                    $('input[name=' + fieldName + ']').val(currentVal - 1);
+                                } else {
+                                    // Otherwise put a 0 there
+                                    $('input[name=' + fieldName + ']').val(15);
+                                }
+                            });
+                        });
                     </script>
                 </div>
             </div>
@@ -150,6 +189,55 @@
                         }
                     }
                 </script>
+
+                <h4>Increment or decrement the temperature</h4>
+                    <img id="radiatorLivingRoom" src="images/Radiator.jpg" height="80px" width="auto"/>
+                    <!-- Credit goes to: http://jsfiddle.net/laelitenetwork/puJ6G/ -->
+                    <form id='livingRoomForm' method='POST' action='#'>
+                        <input type='button' value='-' class='qtyminuslivingroom' field='quantitylivingroom' />
+                        <input type='text' name='quantitylivingroom' value='15' class='qty' />
+                        <input type='button' value='+' class='qtypluslivingroom' field='quantitylivingroom' />
+                    </form>
+                    <script>
+                        jQuery(document).ready(function () {
+                            // This button will increment the value
+                            $('.qtypluslivingroom').click(function (e) {
+                                // Stop acting like a button
+                                e.preventDefault();
+                                // Get the field name
+                                fieldName = $(this).attr('field');
+                                // Get its current value
+                                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                                // If is not undefined
+                                if (!isNaN(currentVal) && currentVal < 25) {
+                                    // Increment
+                                    $('input[name=' + fieldName + ']').val(currentVal + 1);
+                                } else {
+                                    // Otherwise put a 0 there
+                                    $('input[name=' + fieldName + ']').val(25);
+                                }
+                            });
+                            // This button will decrement the value till 0
+                            $(".qtyminuslivingroom").click(function (e) {
+                                // Stop acting like a button
+                                e.preventDefault();
+                                // Get the field name
+                                fieldName = $(this).attr('field');
+                                // Get its current value
+                                var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                                // If it isn't undefined or its greater than 0
+                                if (!isNaN(currentVal) && currentVal > 15) {
+                                    // Decrement one
+                                    $('input[name=' + fieldName + ']').val(currentVal - 1);
+                                } else {
+                                    // Otherwise put a 0 there
+                                    $('input[name=' + fieldName + ']').val(15);
+                                }
+                            });
+                        });
+
+                    </script>
+
             </div>
 		</div>
 	</div>
@@ -228,5 +316,15 @@
 		</div>
 	</div>
     <hr />
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="scripts/retina.js"></script>
+	<script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="scripts/smoothscroll.js"></script>
+	<script type="text/javascript" src="scripts/jquery-func.js"></script>
+
     </body>
 </html>
