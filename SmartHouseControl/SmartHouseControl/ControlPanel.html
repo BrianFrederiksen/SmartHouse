@@ -80,9 +80,11 @@
                     var image = document.getElementById('myFloorPlan');
                     if (image.src.match("floorPlanRed")) {
                         image.src = "images/floorPlanGreen.jpg";
+                        postLockValue(1);
                     }
                     else {
                         image.src = "images/floorPlanRed.jpg";
+                        postLockValue(0);
                     }
                 }
             </script>
