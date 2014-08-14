@@ -91,6 +91,7 @@
     <Content Include="images\LightBulbOff.png" />
     <Content Include="images\LightBulbOn.png" />
     <Content Include="images\LivingRoom.PNG" />
+    <Content Include="images\Logo for WebPage.png" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="images\OfficeRoom.PNG" />

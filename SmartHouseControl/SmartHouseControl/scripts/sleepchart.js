@@ -10,6 +10,7 @@ google.setOnLoadCallback(drawChart);
 function drawChart() {
 
     var jsonObj = { "userData": [{ "id": "1", "hoursOfSleep": "6", "weight": "70", "date": "2014-08-12T07:30:00" }, { "id": "2", "hoursOfSleep": "6.5", "weight": "72", "date": "2014-08-13T07:32:00" }] };
+    
     // Create the data table.
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Date');
