@@ -69,31 +69,27 @@
         </div>
     </div>
 
-    <br />
-
-    <!-- JavaScript for changing lock-->
-    <script type="text/javascript">
-        function changeRed() {
-            document.getElementById('imageGreen').innerHTML = '<img src="images/floor plan red.jpg"/>';
-        }
-    </script> 
-    <script type="text/javascript">
-        function changeGreen() {
-            document.getElementById('imageGreen').innerHTML = '<img src="images/floor plan green.jpg"/>';
-        }
-    </script> 
-
     <div class="container" id="floorImage" name="floorImageOverview">
+        <h3 class="centered">Press lock or unlock the house</h3>
         <div class="centered">
-            <span id="imageGreen" class="container"><img src="images/floor plan.jpg"/></span> 
-            <br /> <!-- Line breaker -->
-            <h3 class="centered">Press the buttons to lock or unlock the house</h3>
-            <input type=button onClick="changeRed()" value='Lock house'/>
-            <input type=button onClick="changeGreen()" value='Unlock house' />
+            <div style="position: relative;" id="floorPlanDiv">
+                <img id="myFloorPlan" onclick="changeImageFloor()" src="images/floorPlanGreen.jpg" />
+            </div>            
+            <script>
+                function changeImageFloor() {
+                    var image = document.getElementById('myFloorPlan');
+                    if (image.src.match("floorPlanRed")) {
+                        image.src = "images/floorPlanGreen.jpg";
+                    }
+                    else {
+                        image.src = "images/floorPlanRed.jpg";
+                    }
+                }
+            </script>
         </div>
     </div>
     
-    <!-- Random linebreaking... Sams choice! Will be refactored-->
+    <!-- Random linebreaking... Sams choice! -->
     <br />
     <hr />
     <br />

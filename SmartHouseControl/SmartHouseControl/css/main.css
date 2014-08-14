@@ -691,3 +691,15 @@ a:after {
     margin-top:50px;
     margin-left:20px;
 }
+
+#floorPlanDiv
+{
+    width: auto;
+    height: 400px;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+#myFloorPlan
+{
+    
+}

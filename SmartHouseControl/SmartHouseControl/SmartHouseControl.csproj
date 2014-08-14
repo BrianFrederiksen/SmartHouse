@@ -73,8 +73,8 @@
     <Content Include="images\divider3.jpg" />
     <Content Include="images\divider4.jpg" />
     <Content Include="images\divider6.jpg" />
-    <Content Include="images\floor plan green.jpg" />
-    <Content Include="images\floor plan red.jpg" />
+    <Content Include="images\floorPlanGreen.jpg" />
+    <Content Include="images\floorPlanRed.jpg" />
     <Content Include="images\floor plan.jpg" />
     <Content Include="images\folio01.jpg" />
     <Content Include="images\folio02.jpg" />
