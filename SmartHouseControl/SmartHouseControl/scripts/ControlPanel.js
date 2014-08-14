@@ -34,9 +34,9 @@ function getHouseData() {
                 }
                 else if (room.name == "Dinning room") {
                     if (room.light == 0)
-                        $("#myDivingRoom").attr("src", "images/LightBulbOff.png");
+                        $("#myDiningRoom").attr("src", "images/LightBulbOff.png");
                     else
-                        $("#myDivingRoom").attr("src", "images/LightBulbOn.png");
+                        $("#myDiningRoom").attr("src", "images/LightBulbOn.png");
                 }
                 else if (room.name == "Guest room") {
                     if (room.light == 0)
@@ -74,3 +74,17 @@ function postLockValue(lockVal) {
         }
     });
 }
+
+function postLightValue(id, value){
+    var lightValue = { houseID: "1", roomID: id, lightValue: value}
+    $.ajax({
+        type: "POST",
+        url: "http://smarthouses.summerinnovationweek.dk/Api/postLightValue.php",
+        data: lightValue,
+        success: function (jsonObj) {
+          
+        }
+    });
+}
+
+
