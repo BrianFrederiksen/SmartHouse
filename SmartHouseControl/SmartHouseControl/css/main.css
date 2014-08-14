@@ -708,7 +708,7 @@ a:after {
     text-align: center;
     padding: 2px;
 }
-.qty {
+.qtykitchen {
     width: 40px;
     height: 25px;
     text-align: center;
@@ -720,7 +720,7 @@ input.qtyminuskitchen { width:25px; height:25px;}
     text-align: center;
     padding: 2px;
 }
-.qty {
+.qtylivingroom {
     width: 40px;
     height: 25px;
     text-align: center;
@@ -732,7 +732,7 @@ input.qtyminuslivingroom { width:25px; height:25px;}
     text-align: center;
     padding: 2px;
 }
-.qty {
+.qtyguestroom {
     width: 40px;
     height: 25px;
     text-align: center;
@@ -744,7 +744,7 @@ input.qtyminusguestroom { width:25px; height:25px;}
     text-align: center;
     padding: 2px;
 }
-.qty {
+.qtydiningroom {
     width: 40px;
     height: 25px;
     text-align: center;
