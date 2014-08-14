@@ -7,31 +7,38 @@ google.setOnLoadCallback(drawChart);
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
 // draws it.
+
 function drawChart() {
 
-    var jsonObj = { "id": "1", "name": "Innovation House", "floorPlanPicture": "http:\/\/is.gd\/qsAKnw", "lock": "0", "rooms": { "room": [{ "id": "1", "name": "Kitchen", "temperature": "22", "light": "0" }, { "id": "2", "name": "Living room", "temperature": "22", "light": "1" }] }, "consumption": { "consumption": [{ "id": "1", "power": "9", "water": "1", "naturalGas": "0.8", "date": "2014-08-13" }, { "id": "2", "power": "9.9", "water": "0.9", "naturalGas": "0.79", "date": "2014-08-14" }, { "id": "3", "power": "8.9", "water": "1.1", "naturalGas": "0.81", "date": "2014-08-15" }, { "id": "4", "power": "10", "water": "1", "naturalGas": "0.82", "date": "2014-08-16" }, { "id": "5", "power": "9.9", "water": "1", "naturalGas": "0.79", "date": "2014-08-17" }, { "id": "6", "power": "10", "water": "1", "naturalGas": "0.78", "date": "2014-08-18" }, { "id": "7", "power": "10", "water": "1", "naturalGas": "0.69", "date": "2014-08-19" }] } };
+    $.ajax({
+        type: "GET",
+        url: "http://smarthouses.local:8888/api/getHouse.php?houseID=1",
+        success: function(jsonObj) {
+        
 
-    // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Date');
-    data.addColumn('number', 'kWh used');
-    data.addColumn('number', 'm3 water used');
-    data.addColumn('number', 'm3 gas used');
-    
-    $.each(jsonObj.consumption.consumption, function (index, element) {
-        data.addRows([
-            [element.date, parseFloat(element.power), parseFloat(element.water), parseFloat(element.naturalGas)]
-        ]);
+            // Create the data table.
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Date');
+            data.addColumn('number', 'kWh used');
+            data.addColumn('number', 'm3 water used');
+            data.addColumn('number', 'm3 gas used');
+
+            $.each(jsonObj.consumption.consumption, function(index, element) {
+                data.addRows([
+                    [element.date, parseFloat(element.power), parseFloat(element.water), parseFloat(element.naturalGas)]
+                ]);
+            });
+
+            // Set chart options
+            var options = {
+                'title': 'This week consumption for the household',
+                'height': 300,
+                hAxis: { title: "Week", titleTextStyle: { color: 'red' } }
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.ColumnChart(document.getElementById('power_bar_chart'));
+            chart.draw(data, options);
+        }
     });
-
-    // Set chart options
-    var options = {
-        'title': 'This week consumption for the household',
-        'height': 300,
-        hAxis: { title: "Week", titleTextStyle: { color: 'red' } }
-    };
-
-    // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.ColumnChart(document.getElementById('power_bar_chart'));
-    chart.draw(data, options);
 }
