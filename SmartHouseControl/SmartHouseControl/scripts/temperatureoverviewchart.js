@@ -11,15 +11,16 @@ function drawChart() {
 
     $.ajax({
         type: "GET",
-        url: "http://smarthouses.local:8888/api/getHouse.php?houseID=1",
+        url: "http://smarthouses.summerinnovationweek.dk/Api/getHouse.php?houseID=1",
         success: function (jsonObj) {
 
+            var jsonDataObj = $.parseJSON(jsonObj);
             // Create the data table.
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Room');
             data.addColumn('number', 'degrees in celcius');
 
-            $.each(jsonObj.rooms.room, function (index, element) {
+            $.each(jsonDataObj.rooms.room, function (index, element) {
                 data.addRows([
                     [element.name, parseInt(element.temperature)]]);
             });

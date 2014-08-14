@@ -14,15 +14,16 @@ function drawChart() {
     //fetch jsonObj by using specific ID and API functionality
     $.ajax({
         type: "GET",
-        url: "http://smarthouses.local:8888/api/getUserAnalytics.php?userID=1",
+        url: "http://smarthouses.summerinnovationweek.dk/Api/getUserAnalytics.php?userID=1",
         success: function(jsonObj) {
         
+        var jsonDataObj = $.parseJSON(jsonObj);
          
         //creating table    
         var data = new google.visualization.DataTable();
             data.addColumn('string', 'Date');
             data.addColumn('number', 'Hours of sleep');
-            $.each(jsonObj.userData, function (index, element) {
+            $.each(jsonDataObj.userData, function (index, element) {
                 data.addRows([
                     [element.date, parseFloat(element.hoursOfSleep)]]);
             });

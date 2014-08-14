@@ -12,9 +12,10 @@ function drawChart() {
 
     $.ajax({
         type: "GET",
-        url: "http://smarthouses.local:8888/api/getHouse.php?houseID=1",
+        url: "http://smarthouses.summerinnovationweek.dk/Api/getHouse.php?houseID=1",
         success: function(jsonObj) {
-        
+            
+            var jsonDataObj = $.parseJSON(jsonObj);
 
             // Create the data table.
             var data = new google.visualization.DataTable();
@@ -23,7 +24,7 @@ function drawChart() {
             data.addColumn('number', 'm3 water used');
             data.addColumn('number', 'm3 gas used');
 
-            $.each(jsonObj.consumption.consumption, function(index, element) {
+            $.each(jsonDataObj.consumption.consumption, function(index, element) {
                 data.addRows([
                     [element.date, parseFloat(element.power), parseFloat(element.water), parseFloat(element.naturalGas)]
                 ]);
